@@ -56,41 +56,48 @@ function Hero() {
       <div className="hero-glow glow-1" />
       <div className="hero-glow glow-2" />
       <div className="container hero-inner">
-        <div className="badge">
-          <span className="dot" />
-          {profile.availability}
-        </div>
-        <h1>
-          Hi, I'm <span className="grad">{profile.firstName}</span>.
-        </h1>
-        <div className="typewriter">
-          {typed}
-          <span className="caret" />
-        </div>
-        <p className="hero-pitch">{profile.pitch}</p>
-        <div className="hero-cta">
-          <a className="btn btn-primary" href={RESUME_URL} download>
-            <Icon.download /> Download Resume
-          </a>
-          <a className="btn btn-ghost" href="#contact">
-            <Icon.message /> Contact Me
-          </a>
-        </div>
-        <div className="hero-socials">
-          <a className="social-link" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
-            <Icon.linkedin />
-          </a>
-          <a className="social-link" href={profile.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp" title="WhatsApp">
-            <Icon.whatsapp />
-          </a>
-          <a className="social-link" href={`mailto:${profile.email}`} aria-label="Email" title="Email">
-            <Icon.mail />
-          </a>
-          {profile.website && (
-            <a className="social-link" href={profile.website} target="_blank" rel="noreferrer" aria-label="Website" title="Website">
-              <Icon.globe />
-            </a>
-          )}
+        <div className="hero-grid">
+          <div className="hero-text">
+            <div className="badge">
+              <span className="dot" />
+              {profile.availability}
+            </div>
+            <h1>
+              Hi, I'm <span className="grad">{profile.firstName}</span>.
+            </h1>
+            <div className="typewriter">
+              {typed}
+              <span className="caret" />
+            </div>
+            <p className="hero-pitch">{profile.pitch}</p>
+            <div className="hero-cta">
+              <a className="btn btn-primary" href={RESUME_URL} download>
+                <Icon.download /> Download Resume
+              </a>
+              <a className="btn btn-ghost" href="#contact">
+                <Icon.message /> Contact Me
+              </a>
+            </div>
+            <div className="hero-socials">
+              <a className="social-link" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                <Icon.linkedin />
+              </a>
+              <a className="social-link" href={profile.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                <Icon.whatsapp />
+              </a>
+              <a className="social-link" href={`mailto:${profile.email}`} aria-label="Email" title="Email">
+                <Icon.mail />
+              </a>
+              {profile.website && (
+                <a className="social-link" href={profile.website} target="_blank" rel="noreferrer" aria-label="Website" title="Website">
+                  <Icon.globe />
+                </a>
+              )}
+            </div>
+          </div>
+          <div className="hero-photo">
+            <Portrait />
+          </div>
         </div>
       </div>
     </header>
@@ -151,7 +158,6 @@ function About() {
             ))}
           </div>
           <div className="about-side reveal">
-            <Portrait />
             <div className="info-card">
               <h4>Location</h4>
               <p>
