@@ -22,9 +22,9 @@ export const profile = {
   timezoneNote: 'GMT+7 · Indochina Time',
 
   email: 'ayemyatmon.ans@gmail.com',
-  phoneDisplay: '+66 9 598 9703',
-  whatsapp: 'https://wa.me/6695989703',
-  linkedin: 'https://www.linkedin.com/in/emily-m1',
+  phoneDisplay: '+66 9 598 29703',
+  whatsapp: 'https://wa.me/66959829703',
+  linkedin: 'https://www.linkedin.com/in/amm74/',
   website: null,
   // File must exist in /public
   resumeFile: 'Aye_Myat_Mon_Resume.pdf',
