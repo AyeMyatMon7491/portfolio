@@ -16,8 +16,8 @@ export const profile = {
     'Data Storyteller',
   ],
   pitch:
-    'I turn complex telecom data into decisions executives can act on — building production-grade BI frameworks in SQL, Power BI and Python, and aligning engineering teams with C-level strategy as an Agile Product Owner. 8+ years across four major telecom operators.',
-  availability: 'Open to new opportunities — Bangkok · remote-friendly',
+    'I turn complex telecom data into decisions executives can act on — building production-grade BI frameworks in SQL, Power BI and Python, and aligning engineering teams with C-level strategy as an Agile Product Owner. 12+ years across four major telecom operators.',
+  availability: 'Open to new opportunities — Relocation  · remote-friendly',
   location: 'Bangkok, Thailand',
   timezoneNote: 'GMT+7 · Indochina Time',
 
@@ -129,7 +129,7 @@ export const experience = [
     tags: ['ROI', 'KPI dashboards', 'VBA', 'RPA', 'Forecasting'],
   },
   {
-    period: '2017 — 2020',
+    period: '2014 — 2020',
     role: 'E2E Mobile Service Quality Lead & Senior Business Analyst',
     company: 'Telecom International Myanmar (Mytel)',
     logo: 'logos/mytel.jpg',
