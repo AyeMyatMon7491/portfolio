@@ -28,6 +28,9 @@ export const profile = {
   website: null,
   // File must exist in /public
   resumeFile: 'Aye_Myat_Mon_Resume.pdf',
+  // Portrait photo — drop the file into /public (e.g. profile.jpg).
+  // Until the file exists, an initials avatar is shown instead.
+  photo: 'profile.jpg',
 }
 
 export const stats = [
@@ -81,6 +84,8 @@ export const experience = [
     period: '2025 — Present',
     role: 'Senior Business Analyst & BI Lead',
     company: 'Huawei Thailand',
+    // Brand badge — replace the file in /public/logos with the official logo to swap it.
+    logo: 'logos/huawei.jpg',
     companyUrl: null,
     location: 'Bangkok, Thailand',
     points: [
@@ -96,6 +101,7 @@ export const experience = [
     period: '2024 — 2025',
     role: 'GEO Marketing Analytics Manager',
     company: 'ATOM Myanmar (formerly Telenor)',
+    logo: 'logos/atom.png',
     companyUrl: null,
     location: 'Myanmar',
     points: [
@@ -110,6 +116,7 @@ export const experience = [
     period: '2020 — 2024',
     role: 'Service Performance Analytics Deputy Manager',
     company: 'KDDI Summit Global Myanmar (MPT-KSGM)',
+    logo: 'logos/mpt.png',
     companyUrl: null,
     location: 'Myanmar',
     points: [
@@ -125,6 +132,7 @@ export const experience = [
     period: '2017 — 2020',
     role: 'E2E Mobile Service Quality Lead & Senior Business Analyst',
     company: 'Telecom International Myanmar (Mytel)',
+    logo: 'logos/mytel.jpg',
     companyUrl: null,
     location: 'Myanmar',
     points: [

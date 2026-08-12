@@ -111,6 +111,26 @@ function StatCard({ value, suffix, label }) {
   )
 }
 
+function Portrait() {
+  const [failed, setFailed] = useState(false)
+  if (!profile.photo || failed) {
+    return (
+      <div className="portrait reveal">
+        <div className="portrait-fallback">{profile.initials}</div>
+      </div>
+    )
+  }
+  return (
+    <div className="portrait reveal">
+      <img
+        src={`${import.meta.env.BASE_URL}${profile.photo}`}
+        alt={profile.name}
+        onError={() => setFailed(true)}
+      />
+    </div>
+  )
+}
+
 function About() {
   return (
     <section id="about">
@@ -131,6 +151,7 @@ function About() {
             ))}
           </div>
           <div className="about-side reveal">
+            <Portrait />
             <div className="info-card">
               <h4>Location</h4>
               <p>
@@ -212,17 +233,26 @@ function Experience() {
         <div className="timeline">
           {experience.map((job) => (
             <div className="timeline-item reveal" key={job.company}>
-              <div className="timeline-period">{job.period}</div>
-              <h3>{job.role}</h3>
-              <div className="timeline-company">
-                {job.companyUrl ? (
-                  <a href={job.companyUrl} target="_blank" rel="noreferrer">
-                    {job.company}
-                  </a>
-                ) : (
-                  job.company
-                )}{' '}
-                · {job.location}
+              <div className="timeline-head">
+                {job.logo && (
+                  <div className="company-logo">
+                    <img src={`${import.meta.env.BASE_URL}${job.logo}`} alt={`${job.company} logo`} loading="lazy" />
+                  </div>
+                )}
+                <div className="timeline-head-text">
+                  <div className="timeline-period">{job.period}</div>
+                  <h3>{job.role}</h3>
+                  <div className="timeline-company">
+                    {job.companyUrl ? (
+                      <a href={job.companyUrl} target="_blank" rel="noreferrer">
+                        {job.company}
+                      </a>
+                    ) : (
+                      job.company
+                    )}{' '}
+                    · {job.location}
+                  </div>
+                </div>
               </div>
               <ul>
                 {job.points.map((p, i) => (
